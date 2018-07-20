@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+	<!--background-color:lightgrey;-->
+}
+
+ul {
+    list-style-type: none;
+	background-image:url({{url_for('static', filename='stars.jpg')}});
+    margin-top: 0px;
+    padding: 0;
+    width: 25%;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+	font-family:verdana;
+}
+
+li a {
+    display: block;
+    color:white;
+    padding:30px 25px 30px 25px;
+    text-decoration: none;
+	border:2px solid white;
+}
+
+li a.active {
+    background-color: lightgray;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    
+    color: white;
+}
+
+#header{
+	border-style:solid;
+	border-color:green;
+	border-width:medium;
+}
+
+#title{
+	border-style:solid;
+    background-color: lightgreen;
+	border-color:green;
+	border-width:medium;
+}
+#cv{
+	border: 1px solid black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 230px;
+    margin-left: 230px;
+    background-color: lightblue;
+}
+
+#table_info{
+	
+	border-color:blue;
+	border-width:medium;
+	margin-top:50px;
+	margin-bottom:50px;
+	margin-right:100px;
+	margin-left:100px;
+	background-color:lightblue;
+}
+table {
+    font-family: georgia;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 3px solid lightgreen;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: offwhite;
+}
+</style>
+</head>
+<body>
+
+<ul style="font-family:georgia; text-transform:lowercase;font-style:oblique; font-size:1.25em;">
+  <li><a class="active" href="{{ url_for('home')}}">HOME</a></li>
+  <li><a href="{{ url_for('projects')}}">PROJECTS</a></li>
+  <li><a href="{{ url_for('algorithms')}}">AlGORITHMS</a></li>
+  <li><a href="#pythonic">PYTHONIC</a></li>
+  <li><a href="#languages">PROGRAMMING LANGUAGES</a></li>
+  <li><a href="#about">ABOUT </a> </li> 
+  
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;font-family:georgia">
+	<h1  id ="header" style="background-image:url({{url_for('static', filename='stars.jpg')}});font-family:georgia;text-align:center;color:white"> </br> <em> algorithms </em> </br> </br> </h1>
+    <p id="table_info"> I have tabulated all my favorite algorithms below in a table, as it is evident. I update this page whenever I am bored or have free time. For now, 
+	I have implemented all the algorithms in <b>Python</b>, but I wish to write them in <b>C++</b> too. It should be fun. </p>
+	
+<table style="text-align:center;">
+  <tr>
+    <th>Date</th>
+    <th>Algorithm</th>
+    <th>Implementation</th>
+  </tr>
+  <tr>
+    <td>2018/07/18</td>
+    <td>Binary/Bisection Search</td>
+    <td>Python</td>
+  </tr>
+  <tr>
+    <td>2018/07/</td>
+    <td>Selection Sort</td>
+    <td>Python</td>
+  </tr>
+  <tr>
+    <td>2018/07/</td>
+    <td>Insertion Sort</td>
+    <td>Python</td>
+  </tr>
+  <tr>
+    <td>2018/07/</td>
+    <td>Merge Sort</td>
+    <td>Python</td>
+  </tr>
+  <tr>
+    <td>2018/07/</td>
+    <td>Quick Sort</td>
+    <td>Python</td>
+  </tr>
+  <tr>
+    <td>2018/07/</td>
+    <td>Breadth-first search</td>
+    <td>Python</td>
+  </tr>
+</table>
+	
+</div>
+
+</body>
+</html>
