@@ -29,8 +29,8 @@ li a {
 }
 
 li a.active {
-    background-color: lightgray;
-    color: white;
+	color: green;
+	font-size: 1.75em;
 }
 
 li a:hover:not(.active) {
@@ -54,8 +54,8 @@ li a:hover:not(.active) {
 	border: 1px solid black;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-right: 230px;
-    margin-left: 230px;
+    margin-right: 200px;
+    margin-left: 200px;
     background-color: lightblue;
 }
 #box{
@@ -72,9 +72,9 @@ li a:hover:not(.active) {
   <li><a class="active" href="{{ url_for('home')}}">HOME</a></li>
   <li><a href="{{ url_for('projects')}}">PROJECTS</a></li>
   <li><a href="{{ url_for('algorithms')}}">AlGORITHMS</a></li>
-  <li><a href="#pythonic">PYTHONIC</a></li>
-  <li><a href="#languages">PROGRAMMING LANGUAGES</a></li>
-  <li><a href="#about">ABOUT </a> </li> 
+  <li><a href="{{ url_for('pythonic')}}">PYTHONIC</a></li>
+  <li><a href="{{url_for('languages')}}">PROGRAMMING LANGUAGES</a></li>
+  <li><a href="{{url_for('about')}}">ABOUT </a> </li> 
   
 </ul>
 
@@ -87,7 +87,7 @@ li a:hover:not(.active) {
   <p style="font-family:georgia;text-indent:50px">Hi, welcome! My name is Nawaj. I am currently a sophomore in college studying 
   maths and physics. I like to code too. This is my personal website with lots of fun nooks and corners to explore. Go to other pages from the sidebar. More about me <a href=""> here. </a> <p>
   
-  <p id="cv" style="text-align:center"> Follow the link to view my <a href=""> resume. </a> </p> 
+  <p id="cv" style="text-align:center"> Follow this <a href="{{url_for('static', filename='resume.pdf')}}", target="_blank"> link </a> to view my resume and this <a href="https://github.com/nawajkc", target = "_blank"> link </a> to visit my GitHub profile.</p> 
 <div id="box" style="font-family:georgia">
 
 	<h3 style="text-align:center;"> What's inside? </h3>
@@ -102,7 +102,7 @@ li a:hover:not(.active) {
   <p> <a href="">Programming Languages</a> </br> Python, C++, and Julia are the languages I usually make use of while writing programs. I write about how I got started on these languages,
   what I like about them, and other similar stuff here. 
   <h4 style="text-align:center">More on this website</h4>
-  <p> I wrote this website from scratch. For front-end, I used the famous HTML and CSS. For the back-end development, I used Python, mainly its module Flask, which is actually remarkably accessible. <a href=""> Here's </a> the entire code base. Feel free to use it, if you'd like to. Shoot me an 
+  <p> I wrote this website from scratch. For front-end, I used the famous HTML and CSS. For the back-end development, I used Python, mainly its module Flask, which is actually remarkably accessible. <a href="https://github.com/nawajkc/Nawaj-Web-Portal", target="_blank"> Here's </a> the entire code base. Feel free to use it, if you'd like to. Shoot me an 
    <a href="mailto:nawajkc@gmail.com"> email </a> for more information, if you wish.</p>
 </div>
 	<!--<h1 style="background-image:url(images/background.jpg)"> </br> </br></br> </h1>-->

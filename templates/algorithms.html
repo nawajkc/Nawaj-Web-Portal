@@ -29,8 +29,8 @@ li a {
 }
 
 li a.active {
-    background-color: lightgray;
-    color: white;
+    font-size:1.75em;
+    color: green;
 }
 
 li a:hover:not(.active) {
@@ -89,12 +89,13 @@ tr:nth-child(even) {
 <body>
 
 <ul style="font-family:georgia; text-transform:lowercase;font-style:oblique; font-size:1.25em;">
-  <li><a class="active" href="{{ url_for('home')}}">HOME</a></li>
+  <li><a href="{{ url_for('home')}}">HOME</a></li>
   <li><a href="{{ url_for('projects')}}">PROJECTS</a></li>
-  <li><a href="{{ url_for('algorithms')}}">AlGORITHMS</a></li>
-  <li><a href="#pythonic">PYTHONIC</a></li>
-  <li><a href="#languages">PROGRAMMING LANGUAGES</a></li>
-  <li><a href="#about">ABOUT </a> </li> 
+  <li><a class="active" href="{{ url_for('algorithms')}}">AlGORITHMS</a></li>
+  <li><a href="{{ url_for('pythonic')}}">PYTHONIC</a></li>
+  <li><a href="{{url_for('languages')}}">PROGRAMMING LANGUAGES</a></li>
+  <li><a href="{{url_for('about')}}">ABOUT </a> </li> 
+  
   
 </ul>
 
